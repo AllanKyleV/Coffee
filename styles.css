@@ -5,7 +5,7 @@
 }
 
 /* display: none; */
-#hero {
+header, #hero, #about, #menu, #testimonials, #gallery, #contact, footer {
     display: none;
 }
 
