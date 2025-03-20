@@ -22,11 +22,16 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Menu</a></li>
-                    <li><a href="#">testimonials</a></li>
+                    <li><a href="#">Testimonials</a></li>
                     <li><a href="#">Gallery</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-icon"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+              </svg></label>
         </div>
 
         <!--Hero-->
@@ -211,7 +216,28 @@
             <p>Refund policy</p>
         </div>
     </footer>
+
+    <!-- Javascript for menu toggle -->
+    <script>
+        // Menu's functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuButton = document.querySelector('.menu-icon');
+            const navList = document.querySelector('nav ul');
+            const menuLinks = document.querySelectorAll('nav ul li a');
+
+            menuButton.addEventListener('click', () => {
+                navList.classList.toggle('show');
+            });
+
+            // Close menu when clicking a menu link
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navList.classList.remove('show');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
 
-<!-- Navigation & Hero Section, Done. Not responsive yet! -->
+<!-- Navigation & Hero Section, Now Responsive! -->
