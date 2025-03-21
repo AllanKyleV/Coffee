@@ -92,7 +92,7 @@ nav li > a:hover {
 }
 
 h1 {
-    font-size: clamp(2.5rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     padding-bottom: 10px;
 }
 
@@ -108,6 +108,13 @@ button {
     text-transform: uppercase;
     font-weight: 100;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #1B5E20;
+    border: 1px solid white;
+    color: white;
+    transition: ease 0.3s;
 }
 
 .cta button:nth-child(1) {
@@ -178,7 +185,7 @@ h3 {
         text-align: center;
         padding: 0;
         background: rgba(0, 128, 0, 0.3);
-        backdrop-filter: blur(3px);
+        backdrop-filter: blur(4px);
         height: 100%;
         margin: 8px 0;
     }
@@ -201,29 +208,41 @@ h3 {
 
     /* Hero */
     #hero {
-        flex-wrap: wrap;
+        flex-direction: column;
     }
     #hero .hero-content {
-        padding: 50px;
-        min-width: 400px;
+        max-height: 400px;
+        padding: 0 50px;
         order: 2;
-        height: 200px;
     }
 
     #hero .hero-image {
         order: 1;
-        min-width: 400px;
         display: grid;
         place-items: center;
     }
 
     #hero .hero-image img {
-        width: 300px;
+        width: 50%;
+        padding-top: 80px;
     }
+
 
     /* About */
     #about {
         flex-direction: column;
+    }
+
+    #about .about-image {
+        padding: 20px 0;
+    }
+
+    #about .about-image img {
+        width: 50%;
+    }
+
+    #about .about-info {
+        padding: 0 15px;
     }
 }
 
