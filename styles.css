@@ -267,6 +267,7 @@ h4 {
     justify-content: center;
     align-items: center;
     background-color: #F5FFFA;
+    clear: both;
 }
 
 #gallery > h3 {
@@ -362,6 +363,8 @@ h4 {
     /* About */
     #about {
         flex-direction: column;
+        height: auto;
+        padding: 30px 0;
     }
 
     #about .about-image {
@@ -377,6 +380,18 @@ l
     }
 
     /* Testimonials */
+    #testimonials {
+        height: auto;
+    }
+
+    /* Gallery */
+    #gallery {
+        height: auto;
+    }
+
+    #gallery .container {
+        padding: 0;
+    }
 }
 
 /* display: none; */
