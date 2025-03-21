@@ -220,7 +220,7 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -257,6 +257,45 @@ h4 {
 
 #testimonials .container::-webkit-scrollbar {
     display: none; /* To remove the visible scrollbar */
+}
+
+/* Gallery */
+#gallery {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5FFFA;
+}
+
+#gallery > h3 {
+    display: inline-block;
+    margin: 50px 0 60px;
+}
+
+#gallery .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 50px;
+}
+
+#gallery .container .item {
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: zoom-in;
+}
+
+#gallery .container img {
+    width: 350px;
+    transition: ease-in-out 0.3s;
+    border-radius: 10px;
+}
+
+#gallery .container img:hover {
+    transform: scale(1.1);
 }
 
 /* Media Queries*/
@@ -336,9 +375,11 @@ l
     #about .about-info {
         padding: 0 15px;
     }
+
+    /* Testimonials */
 }
 
 /* display: none; */
-#gallery, #contact, footer {
+#contact, footer {
     display: none;
 }
