@@ -23,6 +23,8 @@ header {
     height: 75px;
     width: 100%;
     position: fixed;
+    background: rgba(0, 128, 0, 0.3);
+    backdrop-filter: blur(3px);
 }
 
 #navigation .logo {
@@ -122,6 +124,41 @@ button {
     width: 70%;
 }
 
+/* About */
+#about {
+    height: 70vh;
+    display: flex;
+}
+
+#about .about-image {
+    flex: 1;
+    display: grid;
+    place-items: center;
+}
+
+#about .about-info {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 30px 0 0;
+    text-align: justify;
+}
+
+#about .about-image img {
+    width: 60%;
+    border-radius: 50%;
+}
+
+h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    border-bottom: 5px solid #1B5E20;
+    padding-bottom: 5px;
+}
+
 /* Media Queries*/
 @media (max-width: 768px) {
 
@@ -184,9 +221,13 @@ button {
         width: 300px;
     }
 
+    /* About */
+    #about {
+        flex-direction: column;
+    }
 }
 
 /* display: none; */
-#about, #menu, #testimonials, #gallery, #contact, footer {
+#menu, #testimonials, #gallery, #contact, footer {
     display: none;
 }
