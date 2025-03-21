@@ -185,14 +185,24 @@ h3 {
     color: white;
     justify-content: center;
     gap: 80px;
-    padding-bottom: 80px;
+    padding: 0 30px 80px;
 }
 
 #menu .container .item {
     width: 320px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
+}
+
+#menu .container .item:hover {
+    transition: ease-in-out 0.2s;
+    box-shadow: 0px 0px 2px white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 h4 {
@@ -200,10 +210,54 @@ h4 {
 }
 
 #menu .container .item img {
-    width: 100%;
+    width: 80%;
     border-radius: 50%;
 }
 
+/* Testimonials */
+#testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+#testimonials > h3 {
+    display: inline-block;
+    margin: 50px 0 60px;
+}
+
+#testimonials .container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    overflow: auto;
+    scroll-behavior: smooth;
+    max-width: 80%;
+}
+
+#testimonials .container .item {
+    min-width: 320px;
+    display: grid;
+    place-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+#testimonials .container .item img {
+    width: 60%;
+    border-radius: 50%;
+}
+
+#testimonials .container .item p {
+    font-style: italic;
+}
+
+#testimonials .container::-webkit-scrollbar {
+    display: none; /* To remove the visible scrollbar */
+}
 
 /* Media Queries*/
 @media (max-width: 768px) {
@@ -266,7 +320,6 @@ h4 {
         padding-top: 80px;
     }
 
-
     /* About */
     #about {
         flex-direction: column;
@@ -275,7 +328,7 @@ h4 {
     #about .about-image {
         padding: 20px 0;
     }
-
+l
     #about .about-image img {
         width: 50%;
     }
@@ -286,6 +339,6 @@ h4 {
 }
 
 /* display: none; */
-#testimonials, #gallery, #contact, footer {
+#gallery, #contact, footer {
     display: none;
 }
