@@ -299,6 +299,78 @@ h4 {
     transform: scale(1.1);
 }
 
+/* Contact */
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#contact > h3 {
+    display: inline-block;
+    margin: 0 0 90px;
+}
+
+#contact .container {
+    display: flex;
+    width: 100%;
+}
+
+#contact .contact-info {
+    flex: 1;
+    padding: 0 0 0 120px;
+}
+
+#contact .contact-info li {
+    padding: 0 0 15px 0;
+}
+
+#contact form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+#contact form input, textarea {
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-indent: 20px;
+}
+
+#contact form button {
+    align-self: flex-start;
+    width: auto;
+    padding: 10px 30px;
+}
+
+#contact form textarea {
+    height: 150px;
+    resize: none;
+}
+
+#contact form textarea::placeholder {
+    padding-top: 10px;
+}
+
+#contact button {
+    border: 2px solid #1B5E20;
+}
+
+#contact img {
+    width: 30px;
+    padding-right: 10px;
+}
+
+#contact ul li {
+    list-style: none;
+}
+
 /* Media Queries*/
 @media (max-width: 768px) {
 
@@ -392,9 +464,46 @@ l
     #gallery .container {
         padding: 0;
     }
+
+    #contact {
+        height: auto;
+        padding: 50px 0 0 0;
+    }
+
+    #contact h3 {
+        margin: 50px;
+    }
+
+    /* Contact */
+    #contact .container {
+        flex-direction: column;
+    }
+
+    #contact .contact-info {
+        padding: 0;
+        display: grid;
+        place-items: center;
+    }
+    
+    #contact form {
+        display: grid;
+        place-items: center;
+        margin: 35px auto;
+    }
+}
+
+/* Tox fix the overlapping issue on testimonials and gallery*/
+@media (max-width: 831px){
+    #testimonials, #gallery {
+        height: auto;
+    }
+
+    #contact .contact-info {
+        padding: 0 0 0 80px;
+    }
 }
 
 /* display: none; */
-#contact, footer {
+footer {
     display: none;
 }
