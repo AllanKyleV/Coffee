@@ -290,7 +290,7 @@ h4 {
 }
 
 #gallery .container img {
-    width: 350px;
+    max-width: 350px;
     transition: ease-in-out 0.3s;
     border-radius: 10px;
 }
@@ -320,7 +320,6 @@ h4 {
 
 #contact .contact-info {
     flex: 1;
-    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
