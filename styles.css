@@ -320,7 +320,10 @@ h4 {
 
 #contact .contact-info {
     flex: 1;
-    padding: 0 0 0 120px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #contact .contact-info li {
@@ -518,9 +521,5 @@ l
 @media (max-width: 831px){
     #testimonials, #gallery {
         height: auto;
-    }
-
-    #contact .contact-info {
-        padding: 0 0 0 80px;
     }
 }
