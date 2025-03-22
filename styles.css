@@ -371,6 +371,22 @@ h4 {
     list-style: none;
 }
 
+/* Footer */
+footer {
+    display: flex;
+    background-color: #1B5E20;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+footer .footer-policy {
+    display: flex;
+    gap: 0 15px;
+}
+
 /* Media Queries*/
 @media (max-width: 768px) {
 
@@ -490,6 +506,12 @@ l
         place-items: center;
         margin: 35px auto;
     }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 /* Tox fix the overlapping issue on testimonials and gallery*/
@@ -501,9 +523,4 @@ l
     #contact .contact-info {
         padding: 0 0 0 80px;
     }
-}
-
-/* display: none; */
-footer {
-    display: none;
 }
